@@ -1,0 +1,76 @@
+
+<!-- TRIP FINDER /_assets/includes/global/trip-finder/trip-finder/trip-finder.html -->
+<!-- <enso:content name="show-hide" level="page" label="Show/Hide Trip Finder" type="dropdown" options="show,hide" defaultValue="show" editMethod="offPage" /> -->
+
+<div trip-finder="stage" class="js-sticky-nav">
+
+	<!-- HEADER -->
+	<h3 trip-finder="header"><enso:content name="find-a-trip-header" level="site" type="singleline" label="Header" defaultValue="Find a Trip" /></h3>
+
+	<!-- REGIONS -->
+	<div trip-finder="dropdown" trip-finder-link="/africa/" js-toggle="#regions">
+
+		<i class="fa fa-angle-down"></i> <span class="js-regions-dropdown-label" trip-finder="dropdown-label">By Region</span>
+
+		<ul id="regions" trip-finder="list" am="none">
+
+			<enso:repeater name="regions-dropdown" level="site" label="Regions Dropdown" editOrder="region-item-name, region-item-id, region-item-link,">
+
+				<li trip-finder="item" trip-finder-link='<enso:content name="region-item-link"  type="singleline" label="Region Item Link" />' id='<enso:content name="region-item-id" type="singleline" label="Region ID" description="Single value - eg: polarbears" />'><enso:content name="region-item-name" type="singleline" label="Region Name" description="Example: Polar Bear Tours" /></li>
+
+			</enso:repeater>
+
+		</ul>
+
+	</div>
+
+	<!-- COUNTRIES -->
+	<div trip-finder="dropdown" trip-finder-link="/africa/" js-toggle="#countries">
+
+		<i class="fa fa-angle-down"></i> <span class="js-countries-dropdown-label" trip-finder="dropdown-label">By Country</span>
+
+		<ul id="countries" trip-finder="list" am="none">
+
+			<div trip-finder="filter" am="none">Filtered by  <span class="js-region-filter-label"></span> - <span trip-finder="filter-reset" class="js-filter-reset">Remove</span></div>
+
+			<enso:repeater name="countries-dropdown" level="site" label="Countries Dropdown" editOrder="country-name, country-id, associated-regions">
+
+				<li trip-finder="item" class='<enso:content name="associated-regions" type="singleline" label="Associated Regions" description="Seperate multiple values with space" /> <enso:content name="country-id" type="singleline" label="Country ID" description="Single value - eg: canada" />' id='<enso:content name="country-id" type="singleline" label="Country ID" description="Single value - eg: canada" />'><enso:content name="country-name" type="singleline" label="Country Name" description="Example: Canada" /></li>
+
+			</enso:repeater>
+
+		</ul>
+
+	</div>
+
+	<!-- INTERESTS -->
+	<div trip-finder="dropdown" trip-finder-link="/africa/" js-toggle="#interests">
+
+		<i class="fa fa-angle-down"></i> <span class="js-interests-dropdown-label" trip-finder="dropdown-label">By Interests</span>
+
+		<ul id="interests" trip-finder="list" am="none">
+
+				<div trip-finder="filter" am="none">Filtered  by <span class="js-country-filter-label"></span> - <span trip-finder="filter-reset" class="js-filter-reset">Remove</span></div>
+
+				<enso:repeater name="interests-dropdown" level="site" label="Interests Dropdown" editOrder="interest-name, interest-id, associated-regions, associated-countries">
+
+					<li trip-finder="item" class='<enso:content name="associated-regions" type="singleline" label="Associated Regions" description="Seperate multiple values with space" /> <enso:content name="associated-countries" type="singleline" label="Associated Countries" description="Seperate multiple values with space" /> <enso:content name="interest-id" type="singleline" label="Interest ID" description="Single value - eg: cultural" />' id='<enso:content name="interest-id" type="singleline" label="Interest ID" description="Single value - eg: cultural" />'><enso:content name="interest-name" type="singleline" label="Interest Name" description="Example: Cultural" /></li>
+
+				</enso:repeater>
+
+		</ul>
+
+	</div>
+
+	<!-- START DATE -->
+	<span am="sm-hide" class="datepicker-icon js-toggle"><input type="text" id="startDate" value="Start Date" class="datepicker js-start-date" /></span>
+
+	<!-- END DATE -->
+	<span am="sm-hide" class="datepicker-icon js-toggle"><input type="text" id="endDate" value="End Date" class="datepicker js-end-date" /></span>
+
+	<!-- SEARCH -->
+	<a href="#" trip-finder="search" class="js-search-button js-toggle">Search Trips</a>
+
+</div>
+
+<script src="/_assets/includes/global/trip-finder/trip-finder.js"></script>

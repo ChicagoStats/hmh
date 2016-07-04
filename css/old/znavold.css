@@ -1,0 +1,116 @@
+     
+       .contentwrapper .container {background-color:red;}
+       
+       .spacer-left {margin-left: 170px;}
+       
+
+        
+       
+       
+       
+       .navwrapper { max-height: 50px; height:50px; margin: 0 0 0 0; padding: 0px 0px 0px; border-top: solid 1px #ddd; border-bottom: solid 1px #ddd; background: #333;}
+       .navwrapper .container {height:48px; padding: 0 0 0 0;}
+       .navwrapper .container > ul {display: table; list-style-type: none;  padding: 0 0 0 0;}
+       .mz-navbar > li {display: inline-block; line-height: 45px; vertical-align: middle;text-align: center; padding 0 0 0 0;}
+       .navwrapper a {display: block;             font-size: 1.05em; font-family: "Open Sans", Arial, sans-serif; text-decoration: none; }
+       .mz-navbar > li > a {color: #e5e5e5; font-weight: normal; padding: 0 20px 0 20px ;  -webkit-font-smoothing: antialiased;  text-shadow: 2px 2px 2px rgba(0,0,0,.004); }
+       .navwrapper li:hover { background-color: #444;}
+       .mz-navbar > li:hover > a{color: #fff;}
+       .divider-vertical { width:0px; height: 47px; padding: 0 0 0 0; margin: 1px 0 1px 0; border-right: 1px solid #555;}  
+       
+       .mz-dropdown {position: relative;}
+       .mz-dropdown-menu { position: absolute; top: 100%; 
+                           left: 0; z-index: 1000; 
+                           display: none; 
+                           float: left; 
+                           min-width: 160px; 
+                           padding: 8px 0 0 0; 
+                           margin: 0px 0 0 -2px; 
+                           font-size: 1rem;
+                           color: #373a3c; 
+                           text-align: left; 
+                           list-style: none; 
+                           background-color: #efefef; 
+                           background-clip: padding-box;
+                           border: 1px solid rgba(0, 0, 0, 0.15); 
+                           border-radius: 0.25rem;
+                        /*height:45px; width:45px; background-color:red; 
+                          xmax-width: 500px; xwidth:500px;   */
+                          clear:both;
+                           white-space: nowrap;
+                         }
+       .mz-dropdown-menu:after {white-space: normal;}
+       .mz-dropdown-menu a {width:100%; float: left; padding: 2px 10px 2px 10px;}       
+       .mz-dropdown-menu a {white-space: nowrap; color: #373a3c; font-family: "Open Sans", Arial, sans-serif; font-size: 0.95em ;font-weight: 900;}
+       .mz-dropdown-menu ul {padding: 0 0 0 0; margin: 0 0 0 0; display: inline-block; border: 0px solid #000; }
+       .mz-dropdown-menu li { display: table-row; width: 100%; line-height:normal; }
+       .mz-dropdown-menu li:hover {background-color: #aaa;}
+       
+       
+       
+       
+       .mz-navbar{display:none;}
+       .nav-mobile { display:none;}
+       .fa-bars {border: 1px solid rgba(44, 44, 44, 0.4); paddding 5px 5px 5px 5px ; margin:8px 20px 0 0; font-size:36px;color: #EEE}
+       
+       
+       @media (max-width: 74.9em)  /* Large devices (desktops, less than 75em) */
+            { .contentwrapper .container {background-color:blue;}
+              .spacer-left {margin-left: 100px;}
+              .mz-navbar > li > a { padding: 0 15px  0 15px; text-shadow: 0 0 0; margin: 0 0 0 0;}
+              .xdivider-vertical {display: none; border: 0px; margin: 0 0 0 0; height: 0px;}
+              .navwrapper a {padding:0 0 0 0; margin: 0 0 0 0; font-size: 1em; font-weight: normal;}
+              
+            }
+        
+        @media (max-width: 61.9em) /* Medium devices (tablets, less than 62em)*/
+            { .contentwrapper .container {background-color:green;}
+              .mz-navbar li:last-child {display: none;}
+              
+              
+                  
+                
+            }
+        
+        @media (max-width: 47.9em) /* Small devices (landscape phones, less than 48em) */
+            { .contentwrapper .container {background-color:pink;}  /* just to see @media setting*/
+              .nav-mobile {float:right; display:inline-block;}
+                
+                
+              .XXXXXXXXmz-navbar { display:none !important; } 
+                
+              .navwrapper  .container > ul {max-width: 300px ;display: block;  padding 20px 0 0 0; xbackground-color: red;}
+              .divider-vertical {display: none; xborder: 0px; xmargin: 0 0 0 0; height: 0px;}    
+              .navwrapper, .navwrapper .container {max-height:none; height:auto; display:block; overflow:visible; min-height: 100% !important;}
+                
+              .mz-navbar > li {display: block; line-height: 30px; text-align: left; }  
+              .mz-navbar > li a  {color: #eee;}
+                
+              .mz-navbar {position: relative; top: 50px; padding-top: 50px;  xbackground-color: #ddd !important; margin: 0 0 70px 0; }
+              .mz-navbar .mz-dropdown { padding: 0 0 0 0;}
+              .mz-dropdown-menu { position: relative; top: 0; left: 40px;   xxmin-width:inherit; 
+                                  padding: 0 0 0 0; margin: 0px 0 0 0px; font-size: 1em;
+                                  color: #eee; text-align: left; list-style: none; 
+                                  background-color:transparent; xxbackground-clip:inherit;
+                                  border: 0px solid rgba(0, 0, 0, 0.15); border-radius: 0.00em;
+                                }             
+               .XXXXXXmz-dropdown-menu a {color: red; font-size: 0.95em ;font-weight: 900;}
+                .XXXmz-nav li:hover { background-color: red;}
+                
+                
+            }
+        
+        @media (max-width: 33.9em) /* Extra small devices (portrait phones, less than 34em) */
+            {  .contentwrapper .container {background-color:grey;}
+               
+            }
+       
+    /*   
+       @media only screen and (min-width: 320px) and (max-width: 768px) 
+          { .nav-mobile { display:block; } }
+       
+       @media only screen and (min-width: 320px) and (max-width: 768px) 
+          { .nav-list { display:none; } }
+       */
+     
+       
